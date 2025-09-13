@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
-import { Send, Mic, MicOff, Play, User, Bot, Settings, History, Linkedin, FileText, ExternalLink } from 'lucide-react';
+import { Send, Mic, MicOff, Play, User, Bot, Settings, Linkedin, FileText, ExternalLink } from 'lucide-react';
 import './App.css';
 
 // Types
