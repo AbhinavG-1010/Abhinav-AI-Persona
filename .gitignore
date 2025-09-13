@@ -60,6 +60,15 @@ logs/
 *.sqlite
 *.sqlite3
 
+# ChromaDB
+backend/data/chroma_db/
+backend/data/*.db
+
+# Large files
+*.bin
+*.pkl
+*.pickle
+
 # Temporary files
 *.tmp
 *.temp
