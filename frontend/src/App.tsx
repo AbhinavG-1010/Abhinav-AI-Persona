@@ -32,7 +32,7 @@ interface PersonalInfo {
   };
 }
 
-const API_BASE_URL = 'http://localhost:8000';
+const API_BASE_URL = 'https://abhinav-ai-persona.onrender.com';
 
 function App() {
   const [messages, setMessages] = useState<Message[]>([
@@ -292,8 +292,8 @@ function App() {
                   </a>
                   <a 
                     href="/resume.pdf" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
+          target="_blank"
+          rel="noopener noreferrer"
                     className="social-btn resume"
                   >
                     <FileText size={18} />
