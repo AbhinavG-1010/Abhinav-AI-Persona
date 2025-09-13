@@ -72,7 +72,7 @@ function App() {
       const response = await axios.get(`${API_BASE_URL}/health`);
       console.log('Connection successful:', response.data);
       setIsConnected(true);
-    } catch (error) {
+    } catch (error: any) {
       console.error('API connection failed:', error);
       console.error('Error details:', error.response?.data);
       setIsConnected(false);
