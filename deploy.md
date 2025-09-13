@@ -14,10 +14,12 @@ JWT_SECRET_KEY=any_random_string_here
 
 ### 2. Railway Configuration
 
-The following files are already configured:
-- ✅ `Procfile` - Start command for Railway
-- ✅ `railway.json` - Railway deployment settings
-- ✅ `nixpacks.toml` - Python build configuration
+**IMPORTANT**: Use the `railway-deploy/` directory for deployment to avoid size limits.
+
+The following files are configured:
+- ✅ `railway-deploy/Procfile` - Start command for Railway
+- ✅ `railway-deploy/requirements.txt` - Python dependencies
+- ✅ Optimized size: 552KB (well under 4GB limit)
 
 ### 3. Deployment Steps
 
@@ -25,9 +27,10 @@ The following files are already configured:
 2. **Sign up/Login** with GitHub
 3. **Click "Deploy from GitHub"**
 4. **Select repository**: `AbhinavG-1010/Abhinav-AI-Persona`
-5. **Railway will auto-detect** Python and start building
-6. **Add environment variables** (see step 1)
-7. **Deploy!**
+5. **Set Root Directory**: `railway-deploy` (IMPORTANT!)
+6. **Railway will auto-detect** Python and start building
+7. **Add environment variables** (see step 1)
+8. **Deploy!**
 
 ### 4. After Deployment
 
