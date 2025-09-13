@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Send, User, Bot } from 'lucide-react';
+import { Send, User, Bot, Linkedin, FileText, ExternalLink } from 'lucide-react';
 import './App.css';
 
 // Types
@@ -113,6 +113,30 @@ function App() {
               </div>
             </div>
           </div>
+          
+          {/* Social Links */}
+          <div className="social-links">
+            <a 
+              href="https://www.linkedin.com/in/abhinavg22/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="social-link linkedin"
+            >
+              <Linkedin size={20} />
+              <span>LinkedIn</span>
+              <ExternalLink size={14} />
+            </a>
+            <a 
+              href="/resume.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="social-link resume"
+            >
+              <FileText size={20} />
+              <span>Resume</span>
+              <ExternalLink size={14} />
+            </a>
+          </div>
         </div>
       </header>
 
@@ -171,6 +195,30 @@ function App() {
               </button>
             </div>
           </form>
+
+          {/* Quick Actions */}
+          <div className="quick-actions">
+            <h3>QUICK QUESTIONS</h3>
+            <div className="quick-buttons">
+              {[
+                "About Me",
+                "Skills", 
+                "Work Ex",
+                "Salary",
+                "Availability",
+                "Why Leaving"
+              ].map((question) => (
+                <button
+                  key={question}
+                  onClick={() => sendMessage(question)}
+                  className="quick-button"
+                  disabled={isLoading}
+                >
+                  {question}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
