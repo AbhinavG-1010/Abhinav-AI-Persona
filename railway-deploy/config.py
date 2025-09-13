@@ -46,9 +46,9 @@ class Settings(BaseSettings):
     rate_limit_window: int = Field(default=3600, env="RATE_LIMIT_WINDOW")
     
     # File Paths
-    personal_data_path: str = Field(default="../data/personal_info.json")
-    conversation_examples_path: str = Field(default="../data/conversation_examples.json")
-    voice_samples_path: str = Field(default="../data/voice_samples/")
+    personal_data_path: str = Field(default="./data/personal_info.json")
+    conversation_examples_path: str = Field(default="./data/conversation_examples.json")
+    voice_samples_path: str = Field(default="./data/voice_samples/")
     
     class Config:
         env_file = "../.env"
