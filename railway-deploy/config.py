@@ -34,7 +34,7 @@ class Settings(BaseSettings):
     access_token_expire_minutes: int = Field(default=30, env="ACCESS_TOKEN_EXPIRE_MINUTES")
     
     # CORS Configuration
-    cors_origins: List[str] = Field(default=["http://localhost:3000"], env="CORS_ORIGINS")
+    cors_origins: List[str] = Field(default=["http://localhost:3000", "https://abhinav-ai-persona.vercel.app", "https://*.vercel.app"], env="CORS_ORIGINS")
     
     # Voice Configuration
     voice_model: str = Field(default="alloy", env="VOICE_MODEL")
