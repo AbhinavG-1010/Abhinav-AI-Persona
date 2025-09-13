@@ -26,10 +26,22 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [isConnected, setIsConnected] = useState(false);
 
-  // Check API connection
+  // Check API connection and load personal info
   useEffect(() => {
     checkConnection();
+    loadPersonalInfo();
   }, []);
+
+  const loadPersonalInfo = async () => {
+    try {
+      console.log('Loading personal info from:', `${API_BASE_URL}/personal-info`);
+      const response = await axios.get(`${API_BASE_URL}/personal-info`);
+      console.log('Personal info response:', response.data);
+    } catch (error: any) {
+      console.error('Failed to load personal info:', error);
+      console.error('Error details:', error.response?.data);
+    }
+  };
 
   const checkConnection = async () => {
     try {
@@ -59,25 +71,33 @@ function App() {
     setIsLoading(true);
 
     try {
+      console.log('Sending message to backend:', content.trim());
       const response = await axios.post(`${API_BASE_URL}/conversation`, {
         message: content.trim(),
         conversation_id: null
       });
 
+      console.log('Backend response:', response.data);
+      
+      // Check if response has the expected structure
+      const responseText = (response.data as any)?.message || (response.data as any)?.response || 'No response received';
+      
       const assistantMessage: Message = {
         id: (Date.now() + 1).toString(),
         role: 'assistant',
-        content: (response.data as any).response,
+        content: responseText,
         timestamp: new Date()
       };
 
+      console.log('Adding assistant message:', assistantMessage);
       setMessages(prev => [...prev, assistantMessage]);
     } catch (error: any) {
       console.error('Failed to send message:', error);
+      console.error('Error details:', error.response?.data);
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
         role: 'assistant',
-        content: 'Sorry, I encountered an error. Please try again.',
+        content: `Sorry, I encountered an error: ${error.message}. Please try again.`,
         timestamp: new Date()
       };
       setMessages(prev => [...prev, errorMessage]);
