@@ -1,0 +1,167 @@
+{
+  "personal_details": {
+    "name": "Abhinav Gupta",
+    "email": "agupta67@usc.edu",
+    "phone": "+1 (213) 414-9679",
+    "location": "San Francisco Bay Area, CA, USA",
+    "linkedin": "https://www.linkedin.com/in/abhinavg22",
+    "github": "https://github.com/AbhinavG-1010"
+  },
+  "work_authorization": {
+    "status": "Authorized to work in USA (F-1 OPT STEM)",
+    "visa_type": "F-1 OPT (36 months)",
+    "sponsorship_required": true,
+    "relocation_willingness": "Open to relocation",
+    "remote_preference": "Open to on-site/remote/hybrid roles"
+  },
+  "professional_summary": {
+    "title": "AI/ML Engineer",
+    "years_experience": 2,
+    "summary": "CS Engineer with 2+ years' experience across Software Engineering, AI/ML, and Data. Delivered forecasting, NLP pipelines, and production apps; comfortable across Python/JS, ML frameworks (PyTorch, HF), and cloud (AWS/GCP/Azure).",
+    "key_skills": [
+      "Python",
+      "PyTorch",
+      "HuggingFace",
+      "LLMs",
+      "RAG",
+      "OpenAI API",
+      "LangChain",
+      "JavaScript/TypeScript",
+      "FastAPI/Flask",
+      "SQL",
+      "AWS/GCP/Azure",
+      "Docker",
+      "CI/CD (GitHub Actions)",
+      "Data: Postgres, MongoDB, MySQL, Firebase, Redis",
+      "Analytics: Power BI, Tableau"
+    ],
+    "industries": [
+      "Technology",
+      "Mapping/GIS",
+      "Education"
+    ]
+  },
+  "work_experience": [
+    {
+      "company": "Esri",
+      "position": "AI/Data Scientist",
+      "duration": "June 2024 – August 2024",
+      "location": "Redlands, CA",
+      "description": "Built forecasting, retention modeling, and LLM-based moderation to support community engagement analytics.",
+      "key_achievements": [
+        "Developed time series forecasting using Prophet in Python; integrated Khoros API to predict user engagement; achieved ~90% accuracy for actionable insights.",
+        "Designed user retention model (decision trees) using engineered engagement features; produced Power BI reports to inform content strategy and reduce churn risk.",
+        "Built LLM-powered content moderation workflow on Khoros Care by fine-tuning Llama on internal data to flag spam/bot content on Esri Community; increased moderation efficiency by ~60%."
+      ],
+      "technologies": ["Python", "Prophet", "Scikit-learn", "Llama", "HuggingFace", "Power BI", "Khoros API"],
+      "team_size": 7,
+      "reporting_to": "Community Operations Manager"
+    },
+    {
+      "company": "USC Information Sciences Institute (ISI)",
+      "position": "Research Assistant - MLE",
+      "duration": "August 2023 – December 2023",
+      "location": "Los Angeles, CA",
+      "description": "NLP pipeline for aviation incident reports with clustering, classification, deployment, and large-scale EDA.",
+      "key_achievements": [
+        "Engineered BERT-based embeddings in PyTorch; clustered with Gaussian Mixture Model to categorize incident factors.",
+        "Created multi-class classifier achieving F1-macro 0.86 to auto-tag new incident reports; built Streamlit app for review.",
+        "Processed ~200k records with Pandas/NumPy; produced EDA on ASRS dataset for incident cause trends and visualizations."
+      ],
+      "technologies": ["Python", "PyTorch", "BERT", "GMM", "Pandas", "NumPy", "Streamlit"],
+      "team_size": 3,
+      "reporting_to": "Professor Research Scientist"
+    },
+    {
+      "company": "Learn with Leaders",
+      "position": "Software Developer Engineer",
+      "duration": "October 2020 – March 2022",
+      "location": "Delhi, India",
+      "description": "Built and maintained full‑stack applications, analytics dashboards, and backend services for program operations.",
+      "key_achievements": [
+        "Designed and deployed full‑stack web app using Flask (Python), JavaScript, and Firebase Auth for a 10,000‑participant program.",
+        "Implemented backend logic and database ops on Firebase Realtime DB for registration, tracking, and performance reporting.",
+        "Developed Power BI dashboard with SQL-backed data; integrated 175k+ student records; +40% web traffic and +30% lift in conversion rates."
+      ],
+      "technologies": ["Flask", "JavaScript", "Firebase", "SQL", "Power BI"],
+      "team_size": 5,
+      "reporting_to": "CTO"
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Southern California",
+      "degree": "Master of Science – Computer Science",
+      "graduation_year": 2025,
+      "gpa": "3.85/4.0",
+      "duration": "August 2023 – May 2025",
+      "location": "Los Angeles, CA"
+    },
+    {
+      "institution": "Vellore Institute of Technology, India",
+      "degree": "Bachelor of Technology – Computer Science Engineering",
+      "graduation_year": 2023,
+      "gpa": "9.05/10.0",
+      "duration": "July 2019 – April 2023",
+      "location": "Vellore, India"
+    }
+  ],
+  "certifications": [
+  ],
+  "projects": [
+    {
+      "name": "Auto-DocGen – AI Powered API Documentation Pipeline",
+      "description": "CLI to parse Flask apps via AST and generate OpenAPI 3.0 using a Pydantic agent with GPT-3.5‑turbo; integrated Swagger UI and CI/CD to keep interactive API docs in sync.",
+      "technologies": ["Python", "Flask", "Pydantic", "OpenAPI 3", "GPT-3.5", "GitHub Actions"],
+      "role": "Developer",
+      "achievements": [
+        "Automated doc generation and deployment; ensured browser-accessible, always‑up‑to‑date API docs."
+      ],
+      "github_url": "https://github.com/AbhinavG-1010/auto-docgen"
+    },
+    {
+      "name": "Multimodal SignToText Retrieval with Enhanced Facial Features",
+      "description": "Addressed missing facial features in SLR using PyTorch, MediaPipe, and Transformer‑based CLIP; video‑to‑text (V2T) retrieval with pose/landmark features.",
+      "technologies": ["PyTorch", "MediaPipe", "CLIP", "Transformers"],
+      "role": "Researcher",
+      "achievements": [
+        "Transformed 80+ hours of video; achieved ~30% higher Recall in SLR with explicit non‑manual cues."
+      ],
+      "github_url": "https://github.com/AbhinavG-1010/SignToText-Retrieval-Model-with-Enhanced-Facial-Features"
+    },
+    {
+      "name": "Mitigating Catastrophic Forgetting in Continual Learning",
+      "description": "Class‑incremental continual learning with PyTorch using Dynamic Layer Expansion, VAEs, and GANs; applied to CIFAR100.",
+      "technologies": ["PyTorch", "VAEs", "GANs", "CIFAR100"],
+      "role": "Researcher",
+      "achievements": [
+        "Achieved ~68% accuracy across 10 tasks on CIFAR100 (≈6x over vanilla baseline)."
+      ],
+      "github_url": "https://github.com/AbhinavG-1010/Mitigating-Catastrophic-Forgetting-with-Layer-Expansion-and-Replay"
+    }
+  ],
+  "preferences": {
+    "salary_range": "$90,000 - $150,000",
+    "job_types": ["Full-time", "Contract"],
+    "company_size": ["Startup", "Mid-size", "Enterprise"],
+    "work_environment": "Collaborative, innovative, growth-oriented",
+    "career_goals": "Advance as an AI/ML engineer building scalable ML systems and data products; grow into senior/lead roles driving 0→1 initiatives."
+  },
+  "availability": {
+    "notice_period": "0 days",
+    "start_date": "Immediate",
+    "interview_availability": "Flexible",
+    "timezone": "Pacific Time (PT)"
+  },
+  "common_questions": {
+    "why_leaving": "Seeking new challenges and growth opportunities in AI/ML space",
+    "strengths": "Strong problem-solving, rapid learner, end-to-end ownership, cross-functional collaboration",
+    "weaknesses": "Can be detail-oriented; actively improving prioritization and delegation",
+    "salary_expectations": "Open to discussing total compensation commensurate with role, scope, and location",
+    "questions_for_them": [
+      "What does career growth look like in this role?",
+      "What are the biggest challenges the team is facing?",
+      "How does the company support professional development?"
+    ]
+  }
+}
